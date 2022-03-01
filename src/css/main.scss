@@ -1,0 +1,97 @@
+@import './normalize';
+@import "~aos/src/sass/aos";
+
+$orange: #E07900;
+$gray: #717171;
+$black: #000;
+
+/* Components */
+@import 'components/header';
+@import 'components/footer';
+
+/* Sections */
+@import 'sections/hero';
+@import 'sections/investment-philosophy';
+@import 'sections/block-text';
+@import 'sections/were-different';
+
+.highlight {
+  color: $orange;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 46px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+  }
+}
+
+.section {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  &> [class^="inner-"] {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+body {
+  font-family: 'Palanquin', sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.825rem;
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.arrow {
+  height: 17px;
+  width: 63px;
+  background-image: url(../../dist/img/arrow.png);
+  background-position: center;
+  background-size: cover;
+}

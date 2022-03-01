@@ -1,0 +1,66 @@
+.investment-philosophy {
+  background-image: url(../img/background-gray.png);
+  background-position: center;
+  background-size: cover;
+
+  .inner-investment-philosophy {
+    min-height: 100vh;
+    padding: 40px 0;
+    color: #fff;
+    font-size: 26px;
+    line-height: 30px;
+
+    @media screen and (max-width: 991px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .title {
+      text-align: center;
+      color: $orange;
+    }
+  }
+
+  .card-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    column-gap: 37px;
+    font-weight: 300;
+
+    max-width: 1080px;
+    margin: 0 auto;
+
+    margin-top: 100px;
+
+    p {
+      color: #FFF;
+    }
+
+    .column {
+      &.average {
+        p, span {
+          color: $orange;
+        }
+        
+        &> div {
+          display: flex;
+          span {
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 766px) {
+    .card-columns {
+      .column.average > div {
+        span {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

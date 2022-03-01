@@ -1,0 +1,136 @@
+#header {
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #FFF;
+  z-index: 1;
+
+  transition: all 0.2s;
+
+
+  .header-content {
+    max-width: 1280px;
+    height: 54px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: height 0.5s;
+
+    .brand__link {
+      height: 37px;
+      transition: height 0.5s;
+
+      img {
+        height: 37px;
+        transition: height 0.5s;
+      }
+    }
+  }
+
+  .nav {
+    &__link {
+      text-transform: uppercase;
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  #nav-button {
+    position: relative;
+    display: none;
+    width: 30px;
+    .icon,
+    .icon::before,
+    .icon::after {
+      display: block;
+      background-color: $orange;
+      position: absolute;
+      height: 4px;
+      width: 30px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 2px;
+    }
+  
+    .icon::before {
+      content: '';
+      margin-top: -8px;
+    }
+  
+    .icon::after {
+      content: '';
+      margin-top: 8px;
+    }
+
+    &.open {
+      .icon,
+      .icon::before,
+      .icon::after {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  @media screen and (max-width: 766px) {
+    .nav {
+      position: absolute;
+      top: -500px;
+      left: 0;
+      padding: 24px 24px;
+      width: 100%;
+      background-color: #FFF;
+      opacity: 1;
+      transition: opacity 0.5s;
+      &__link {
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      &.open-menu {
+        top: 54px;
+      }
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    &.initial {
+      .nav {
+        opacity: 0;
+        top: -500px;
+      }
+
+      #nav-button {
+        opacity: 0;
+      }
+    }
+
+    #nav-button {
+      display: block;
+    }
+  }
+
+  &.initial {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+
+    .header-content {
+      height: 120px;
+
+      a {
+        color: rgba(0, 0, 0, 0);
+      }
+
+      .brand__link {
+        height: 74px;
+        img {
+          height: 74px;
+        }
+      }
+    }
+  }
+}

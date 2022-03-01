@@ -1,0 +1,70 @@
+#footer {
+  background: linear-gradient(254.55deg, #DADADA 0%, rgba(218, 218, 218, 0) 100%);
+  background-image: url(../img/background-footer.png);
+  background-size: cover;
+  background-position: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  .footer-content {
+    padding: 40px 0;
+
+    .contact-info {
+      h3 {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 32px;
+        color: $orange;
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 2px solid $orange;
+        padding-bottom: 20px;
+      }
+
+      .contact-data {
+        justify-content: center;
+        & > div {
+          font-size: 20px;
+          font-weight: 300;
+          margin: 0 auto;
+          max-width: max-content;
+        }
+        @media screen and (min-width: 540px) {
+          display: flex;
+          & > div {
+            display: inline-block;
+            margin: revert;
+            &:not(:last-of-type) {
+              margin-right: 70px;
+            }
+          }
+        }
+
+        .location-detail, .email-detail {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-image: url(../img/location-icon.png);
+            background-size: contain;
+            background-position: center;
+            top: 0;
+            bottom: 0;
+            left: -20px;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      color: $gray;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+}

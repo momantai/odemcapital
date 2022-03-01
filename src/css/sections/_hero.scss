@@ -1,0 +1,47 @@
+.hero {
+  min-height: calc(100vh - 55px);
+  background-image: url(../img/hero-background.png);
+  background-size: cover;
+  background-position: center;
+  color: $gray;
+
+  .inner-hero {
+    margin: 0 auto;
+    min-height: calc(100vh);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .title {
+      max-width: 530px;
+      font-weight: 300;
+    }
+
+    .arrow {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      animation: arrow 0.5s linear infinite;
+      opacity: 0;
+      transition: opacity 0.4s linear;
+    }
+  }
+
+  &.initial {
+    .arrow {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-5px)
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
