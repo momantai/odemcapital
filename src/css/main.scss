@@ -1,7 +1,7 @@
 @import './normalize';
 @import "~aos/src/sass/aos";
 
-$orange: #E07900;
+$primary: #FF3336;
 $gray: #717171;
 $black: #000;
 
@@ -16,7 +16,7 @@ $black: #000;
 @import 'sections/were-different';
 
 .highlight {
-  color: $orange;
+  color: $primary;
 }
 
 .title {
